@@ -17,12 +17,13 @@ app = Flask(__name__)
 frontend = os.getenv('FRONTEND_URL')
 backend = os.getenv('BACKEND_URL')
 origins = [frontend, backend]
+print("origins: ", origins)
 cors = CORS(
   app, 
   resources={r"/api/*": {"origins": origins}},
   expose_headers="location,link",
   allow_headers="content-type,if-modified-since",
-  methods="OPTIONS,GET,HEAD,POST"
+  methods="OPTIONS,GET,HEAD,POST" 
 )
 
 @app.route("/api/message_groups", methods=['GET'])
@@ -62,6 +63,7 @@ def data_create_message():
 
 @app.route("/api/activities/home", methods=['GET'])
 def data_home():
+  # print(dir(request))
   data = HomeActivities.run()
   return data, 200
 

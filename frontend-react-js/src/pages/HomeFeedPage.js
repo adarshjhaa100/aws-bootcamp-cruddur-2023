@@ -21,10 +21,14 @@ export default function HomeFeedPage() {
   const loadData = async () => {
     try {
       const backend_url = `${process.env.REACT_APP_BACKEND_URL}/api/activities/home`
+      
+      console.log("Backend URL: ", backend_url);
+
       const res = await fetch(backend_url, {
         method: "GET"
       });
       let resJson = await res.json();
+      console.log("Response: ", resJson)
       if (res.status === 200) {
         setActivities(resJson)
       } else {

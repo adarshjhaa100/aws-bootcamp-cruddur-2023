@@ -75,9 +75,11 @@ docker run \
 -e PORT=4567 \
 -it -d backend-flask:0.1
 ```
+Note: --rm : removes the container once its closed, -e is used to declare env variables, -d is used to run container in backgroud returning a container ID
 
 
-To run frontent image:
+
+Similarly, to run frontent image:
 
 ```
 docker run \
@@ -86,6 +88,52 @@ docker run \
 -e PORT=3000 \
 -it -d frontend-react:v0.1
 ```
+
+Run Shell Scrip inside container:
+```
+docker exec -it intelligent_ishizaka /bin/sh
+```
+
+
+
+### Docker Compose
+
+using the docker-compose file from the instructions, encountered the issue of frontend getting closed automatically, so checked the logs for the frontend container:
+
+```
+docker container logs 787977dae850
+```
+here, 787977dae850 is the container ID of the frontend container.
+
+Found the following logs:
+```
+
+> frontend@0.1.0 start
+> react-scripts start
+
+sh: 1: react-scripts: not found
+
+> frontend@0.1.0 start
+> react-scripts start
+
+sh: 1: react-scripts: not found
+
+```
+
+Apparently the volume defined in the docker-compose.yml was causing the issue:
+
+```
+   volumes:
+      - ./frontend-react-js:/frontend-react-js
+```
+
+Also, the docker-compose file has been modified a bit to pull in prebuilt images instead of building using compose-up. Just replace the build argument with image, e.g. in frontend:
+
+```
+image: frontent-react-js:v0.2
+```
+here, frontent-react-js is the container image for the frontend react project
+
 
 
 

@@ -1,0 +1,7 @@
+frontent-react-js:v0.2
+
+docker run \
+--rm -p 3000:3000 \
+-e REACT_APP_BACKEND_URL="http://127.0.0.1:4567" \
+-e PORT=3000 \
+-it -d frontent-react-js:v0.2

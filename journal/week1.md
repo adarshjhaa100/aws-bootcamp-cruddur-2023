@@ -78,8 +78,27 @@ docker run \
 Note: --rm : removes the container once its closed, -e is used to declare env variables, -d is used to run container in backgroud returning a container ID
 
 
+#### Viewing logs
 
-Similarly, to run frontent image:
+On running the container, the API was unaccesible from the localhost. So, I viewed the container logs from the console:
+
+```
+docker logs $CONTAINER_ID
+```
+the container_id can be obtainer while running the docker run command, or using:
+
+```
+docker ps
+```
+
+Which gives the container logs
+
+
+
+
+
+
+Similarly, to run frontend image:
 
 ```
 docker run \

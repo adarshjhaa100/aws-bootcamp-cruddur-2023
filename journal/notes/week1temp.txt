@@ -5,3 +5,8 @@ docker run \
 -e REACT_APP_BACKEND_URL="http://127.0.0.1:4567" \
 -e PORT=3000 \
 -it -d frontent-react-js:v0.2
+
+CORS Error from frontend:
+
+Access to fetch at 'https://4567-adarshjhaa1-awsbootcamp-kqqcz50incx.ws-us89b.gitpod.io/api/activities/home' from origin 'https://3000-adarshjhaa1-awsbootcamp-kqqcz50incx.ws-us89b.gitpod.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+bundle.js:4191          GET https://4567-adarshjhaa1-awsbootcamp-kqqcz50incx.ws-us89b.gitpod.io/api/activities/home net::ERR_FAILED 401

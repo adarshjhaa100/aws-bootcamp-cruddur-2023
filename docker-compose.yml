@@ -4,7 +4,7 @@ services:
     environment:
       FRONTEND_URL: "http://127.0.0.1:3000"
       BACKEND_URL: "http://127.0.0.1:4567"
-    build: ./backend-flask
+    image: backend-flask:v0.2
     ports:
       - "4567:4567"
     volumes:

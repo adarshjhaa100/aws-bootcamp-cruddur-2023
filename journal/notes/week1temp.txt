@@ -10,3 +10,43 @@ CORS Error from frontend:
 
 Access to fetch at 'https://4567-adarshjhaa1-awsbootcamp-kqqcz50incx.ws-us89b.gitpod.io/api/activities/home' from origin 'https://3000-adarshjhaa1-awsbootcamp-kqqcz50incx.ws-us89b.gitpod.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
 bundle.js:4191          GET https://4567-adarshjhaa1-awsbootcamp-kqqcz50incx.ws-us89b.gitpod.io/api/activities/home net::ERR_FAILED 401
+
+
+
+Homework:
+
+Homework Challenges    
+Run the dockerfile CMD as an external script
+
+Push and tag a image to DockerHub (they have a free tier)
+
+Use multi-stage building for a Dockerfile build
+
+Implement a healthcheck in the V3 Docker compose file
+
+Research best practices of Dockerfiles and attempt to implement it in your Dockerfile
+
+Learn how to install Docker on your localmachine and get the same containers running outside of Gitpod / Codespaces
+
+Launch an EC2 instance that has docker installed, and pull a container to demonstrate you can run your own docker processes. 
+
+
+
+https://3000-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}
+
+https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}
+
+
+[
+  {
+    "uuid": "0056a369-4618-43a4-ad88-e7c371bf5582",
+    "display_name": "Andrew Brown",
+    "handle": "andrewbrown",
+    "message": "Who likes pineapple on their pizza?",
+    "replies_count": 5,
+    "reposts_count": 2,
+    "likes_count": 103,
+    "created_at": "2023-02-06T18:11:03+00:00",
+    "expires_at": "2023-02-06T18:11:03+00:00"
+  }
+]

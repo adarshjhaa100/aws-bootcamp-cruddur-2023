@@ -5,12 +5,14 @@ import CrudButton from '../components/CrudButton';
 import ProfileInfo from '../components/ProfileInfo';
 
 export default function DesktopNavigation(props) {
-
+  console.log(props)
   let button;
   let profile;
   let notificationsLink;
   let messagesLink;
   let profileLink;
+
+  // Display the options in case user is logged in
   if (props.user) {
     button = <CrudButton setPopped={props.setPopped} />;
     profile = <ProfileInfo user={props.user} />;

@@ -93,11 +93,6 @@ docker ps
 
 Which gives the container logs
 
-
-
-
-
-
 Similarly, to run frontend image:
 
 ```
@@ -153,6 +148,17 @@ image: frontent-react-js:v0.2
 ```
 here, frontent-react-js is the container image for the frontend react project
 
+
+
+### Running frontend and backend through gitpod
+
+With the docker composed file, I was able to deploy both of the containers for frontend and backend and expose them over 3000 and 4567 ports respectively.
+
+Both were accessble using URL generated under the ports section.
+
+#### Frontend not able to hit backend due to CORS error.
+
+This was because of the backend port being locked to public. Switching it back allowed the CORS and frontend was able to send HTTP requests.
 
 
 
